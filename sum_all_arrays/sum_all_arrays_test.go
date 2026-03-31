@@ -6,9 +6,20 @@ import (
 )
 
 func TestSumAllArrays(t *testing.T) {
-	t.Run("test 2 arrays as input", func(t *testing.T) {
+	t.Run("test 2 slices as input", func(t *testing.T) {
 		got := SumAllArrays([]int{1, 2}, []int{3, 5})
 		want := []int{3, 8}
+
+		if !slices.Equal(got, want) {
+			t.Errorf("Expected %v, got %v", want, got)
+		}
+	})
+}
+
+func TestSumAllTails(t *testing.T) {
+	t.Run("Sum all tails of 3 slices", func(t *testing.T) {
+		got := SumAllTails([]int{1, 5, 3}, []int{9, 2, 1}, []int{14, 22, 55})
+		want := []int{9, 12, 91}
 
 		if !slices.Equal(got, want) {
 			t.Errorf("Expected %v, got %v", want, got)
