@@ -25,6 +25,15 @@ func TestSumAllTails(t *testing.T) {
 			t.Errorf("Expected %v, got %v", want, got)
 		}
 	})
+
+	t.Run("SumAllTails with empty slice", func(t *testing.T) {
+		got := SumAllTails([]int{}, []int{9, 2, 1})
+		want := []int{0, 3}
+
+		if !slices.Equal(got, want) {
+			t.Errorf("Expected %v, got %v", want, got)
+		}
+	})
 }
 
 func TestArrSum(t *testing.T) {
