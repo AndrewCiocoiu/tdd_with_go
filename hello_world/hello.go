@@ -2,8 +2,16 @@ package main
 
 import "fmt"
 
+const helloEnglishPrefix = "Hello, "
+const defaultGreeting = "Hello, Stranger"
+
 func Hello(name string) string {
-	return "Hello, " + name + "!"
+
+	if name == "" {
+		return defaultGreeting
+	}
+
+	return helloEnglishPrefix + name
 }
 
 func main() {
