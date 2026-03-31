@@ -56,4 +56,9 @@ func ExampleRepeat() {
 	//Output: bbb
 }
 
-//Automatically removing spaces
+// Automatically removing spaces
+func ExampleRepeat_withSpaces() {
+	out := Repeat("aba aba", 2)
+	fmt.Println(out)
+	//Output: abaabaabaaba
+}
