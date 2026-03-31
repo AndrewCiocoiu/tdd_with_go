@@ -1,6 +1,6 @@
 package arrsum
 
-func ArrSum(arr [5]int) int {
+func ArrSum(arr []int) int {
 	sum := 0
 	for _, nr := range arr {
 		sum += nr
