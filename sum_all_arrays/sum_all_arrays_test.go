@@ -19,7 +19,7 @@ func TestSumAllArrays(t *testing.T) {
 func TestSumAllTails(t *testing.T) {
 	t.Run("Sum all tails of 3 slices", func(t *testing.T) {
 		got := SumAllTails([]int{1, 5, 3}, []int{9, 2, 1}, []int{14, 22, 55})
-		want := []int{9, 12, 91}
+		want := []int{8, 3, 77}
 
 		if !slices.Equal(got, want) {
 			t.Errorf("Expected %v, got %v", want, got)

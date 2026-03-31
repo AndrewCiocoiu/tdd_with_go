@@ -14,7 +14,15 @@ func SumAllArrays(numbersToSum ...[]int) []int {
 
 // Will return a slice with each element being the sum of a slice that was provided except the first element
 func SumAllTails(numbersToSum ...[]int) []int {
-	return nil
+	var sums []int
+
+	for _, numbers := range numbersToSum {
+		tail := numbers[1:]
+		sums = append(sums, ArrSum(tail))
+
+	}
+
+	return sums
 }
 
 func ArrSum(arr []int) int {
