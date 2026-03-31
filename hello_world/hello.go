@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 const (
 	spanish  = "spanish"
 	romanian = "romanian"
@@ -16,6 +14,7 @@ const (
 	defaultName = "Stranger"
 )
 
+// Hello takes a name and a language and will greet the name in that language.
 func Hello(name string, language string) string {
 
 	if name == "" {
@@ -39,8 +38,4 @@ func greetingPrefix(language string) (prefix string) {
 		prefix = englishPrefix
 	}
 	return prefix
-}
-
-func main() {
-	fmt.Println(Hello("world", ""))
 }
