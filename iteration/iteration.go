@@ -2,7 +2,7 @@ package iteration
 
 import "strings"
 
-// Will repeat the given string the given number of times
+// Will repeat the given string the given number of times. Automatically removes spaces.
 func Repeat(s string, times int) string {
 	var repeated strings.Builder
 

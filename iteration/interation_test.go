@@ -32,6 +32,15 @@ func TestIteration(t *testing.T) {
 			t.Errorf("Wanted %q, got %q", want, got)
 		}
 	})
+
+	t.Run("Automatially remove spaces.", func(t *testing.T) {
+		got := Repeat("ba ca ra", 2)
+		want := "bacarabacara"
+
+		if want != got {
+			t.Errorf("Wanted %q, got %q", want, got)
+		}
+	})
 }
 
 func BenchmarkRepeat(b *testing.B) {
@@ -40,8 +49,11 @@ func BenchmarkRepeat(b *testing.B) {
 	}
 }
 
+// Simple call
 func ExampleRepeat() {
 	out := Repeat("b", 3)
 	fmt.Println(out)
 	//Output: bbb
 }
+
+//Automatically removing spaces
