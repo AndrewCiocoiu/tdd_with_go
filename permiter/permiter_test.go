@@ -4,7 +4,8 @@ import "testing"
 
 func TestPermiter(t *testing.T) {
 	t.Run("Gives correct permiter", func(t *testing.T) {
-		got := Permiter(10.0, 10.0)
+		rectangle := Rectangle{10.0, 10.0}
+		got := Permiter(rectangle)
 		want := 40.0
 
 		if got != want {
@@ -15,7 +16,8 @@ func TestPermiter(t *testing.T) {
 
 func TestArea(t *testing.T) {
 	t.Run("Gives correct area", func(t *testing.T) {
-		got := Area(10.0, 10.0)
+		rectangle := Rectangle{10.0, 10.0}
+		got := Area(rectangle)
 		want := 100.0
 
 		if got != want {
