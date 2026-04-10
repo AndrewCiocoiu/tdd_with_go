@@ -20,6 +20,6 @@ func (w *Wallet) Balance() Bitcoin {
 	return w.balance
 }
 
-func (w *Wallet) Withdraw(withdraw_amoutn Bitcoin) {
-	println("Nothing")
+func (w *Wallet) Withdraw(withdraw_amount Bitcoin) {
+	w.balance -= withdraw_amount
 }
